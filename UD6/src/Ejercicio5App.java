@@ -1,5 +1,6 @@
 import javax.swing.JOptionPane; 
 import java.util.ArrayList;
+import java.util.Iterator;
 
 
 public class Ejercicio5App {
@@ -7,29 +8,41 @@ public class Ejercicio5App {
 	public static void main(String[] args) {
 		// TODO Auto-generated method stub
 		
-		String numero=JOptionPane.showInputDialog(null, "Introduzca el número a convertir: ");
-		int n= Integer.parseInt(numero);
+		String numero=JOptionPane.showInputDialog(null, "Introduzca el número a convertir: ");  //Le pedimos al usuario el número.
+		int n= Integer.parseInt(numero);         //Convertimos el String a Int para poder trabajar con él.
 		
-		ArrayList<String> binario= new ArrayList<String>();
-		calculo(n);
-		JOptionPane.showMessageDialog(null,binario );
+		String binario= new String(calculo(n));   //Le asigamos al String el resultado del método.
+		
+		imprimirarray(binario);
+		
 		
 
 	}
-	public static ArrayList<String> calculo(int n) {
-		int x=0;
-		int binar=0;
-		ArrayList<String> binario= new ArrayList<String>();
-		while (n>1){
-			x=n%2;
-			n=n/2;
-			 binar=binar+x;
-			String bin= String.valueOf(binar);
-			binario.add(bin);
+	public static void imprimirarray (String binario) { 
+				JOptionPane.showMessageDialog(null, "El número convertido a binario es: " +binario);  //Método para imprimir el resultado.
+			}
+		    
 			
-		}
 		
-		return binario;
+	public static String calculo(int n) {         //Función que calcula el número convertido a binario.
+		
+		
+		int i;
+		String binario= "";
+		while (n>0){
+			if (n%2==0) {
+				binario= "0" +binario;
+			} else {
+				binario= "1" +binario;
+			}
+			
+			n=n/2;
+			
+			
+			
+		}return binario;
+		
+		
 	}
 
 }

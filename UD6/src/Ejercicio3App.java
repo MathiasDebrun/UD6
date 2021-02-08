@@ -19,9 +19,9 @@ public class Ejercicio3App {
        if(n==1 || n==4) { 					   //Le indicamos a la función que devuelva estos valores en específico dado que con el método el resultado sería que son primos, cuando en realidad no lo son
     	   return false;
        }
-		for (int i = 2; i < n / 2; i++) {       
+		for (int i=2; i<n/2; i++) {       
 			
-			if (n % i == 0)
+			if (n%i == 0)
 				return false;
 		}
 		
