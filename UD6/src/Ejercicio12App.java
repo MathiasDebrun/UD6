@@ -19,7 +19,7 @@ public class Ejercicio12App {
 		
 	}
 	public static void imprimirarray(ArrayList<Integer> lista) {
-		 Iterator<Integer> it= lista.iterator();
+		 Iterator<Integer> it= lista.iterator();                        //Sé que se imprime el resultado varias veces pero no he encontrado manera de solucionarlo y tampoco veo el error porque tampoco hay relación entre cuántas veces se muestra el resultado y el número de resultados.
 		 int num;
 		 while (it.hasNext()) {
 			 num= it.next();
